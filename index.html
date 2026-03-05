@@ -840,18 +840,16 @@ display: block;
             <a href="#about">About</a>
             <a href="#education">Education</a>
             <a href="#projects">Selected Projects</a>
-            <a href="#engagement">Academic Engagement</a>
-            <a href="#presentations">Selected Presentations</a>
             <a href="#teaching">Teaching Experience</a>
             <a href="#skills-training">Skills</a>
         </div>
 
         <div class="mobile-footer">
             <div class="sidebar-footer" style="width: 100%; margin-top: 100px;">
-                <a href="https://scholar.google.com/citations?user=OGFBEx0AAAAJ&hl=en" target="_blank">Scholar</a>
-                <a href="https://orcid.org/0009-0008-4850-9160" target="_blank">ORCID</a>
-                <br> <a href="https://www.linkedin.com/in/tianjiao-pu-713948173" target="_blank">LinkedIn</a>
-                <a href="https://environment.princeton.edu/people/tianjiao-pu/" target="_blank">Affiliation</a> </br>
+                <a href="https://scholar.google.com/citations?user=-YUvZhYAAAAJ&hl=en" target="_blank">Scholar</a>
+                <a href="https://orcid.org/0000-0003-1294-9005" target="_blank">ORCID</a>
+                <br> <a href="https://www.linkedin.com/in/donghui-hydro" target="_blank">LinkedIn</a>
+                <a href="https://environment.princeton.edu/people/donghui-li/" target="_blank">Affiliation</a> </br>
             </div>
             <div class="copyright-text"  style="width: 100%; margin-bottom: 0px; font-size: 0.65rem; color: #bbb; letter-spacing: 0.5px;
             padding-left: 10px;">
@@ -870,17 +868,20 @@ display: block;
                     Hello! I'm Donghui.
                 </p>
                 <p>
-                    I completed my Ph.D. with <a href="https://cee.illinois.edu/directory/profile/xmcai" target="_blank">Dr. Ximing Cai</a> at University of Illinois Urbana-Champaign (2024), and currently a Postdoctoral Research Associate with <a href="https://villarini.scholar.princeton.edu/" target="_blank">Dr. Gabriele Villarini</a> at Princeton University.
+                    I am a Postdoctoral Research Associate at Princeton University working with <a href="https://villarini.scholar.princeton.edu/" target="_blank">Dr. Gabriele Villarini</a> at Princeton University. I earned my Ph.D. from the University of Illinois Urbana-Champaign (2024) under the advisement of <a href="https://cee.illinois.edu/directory/profile/xmcai" target="_blank">Dr. Ximing Cai</a>.
                 </p>
                 <p>
-                    My work advances large-scale hydrological modeling and water resources modeling, with the application at hydrological extreme events.
+                    My work advances large-scale hydrological and water resources modeling, with a specific focus on understanding and predicting hydrological extremes. I leverage machine learning, physically based modeling, and high-performance computing to transform complex human-water processes into decision-relevant insights.
                 </p>
                 <p>
-                    My work integrates machine learning, physically based modeling, and high-performance computing to simulate and predict water-related hazards and translate complex environmental processes into decision-relevant insights.</p>
-                <p>
-                    I am actively exploring the path to use agentic LLMs to translate and deliver model outputs to actionable risk communications.</p>
+                    I am currently exploring the potential of Agentic LLMs to translate model outputs into actionable risk communications. By combining state-of-the-art simulation with generative AI, my goal is to close the loop between data-heavy science and real-world resilience.
                 </p>
-                <p style="font-style: italic;">Outside of research, I find my rhythm in rock 🎸.</p>
+                <p style="font-style: italic;">
+                    When I'm not in research mode, you'll find me vibing to grunge.
+                </p>
+                <p style="font-weight: bold;">
+                    <a href="CV_Donghui_Li.pdf" target="_blank" style="color: #FF5F05;">[Download Full CV (PDF)]</a>
+                </p>
             </div>
             <div class="profile-image-container">
                 <img src="profile.png" alt="Donghui Li" class="profile-image">
@@ -990,7 +991,7 @@ display: block;
 
     <div class="project-item">
         <div class="project-figure" style=" overflow: hidden; border-radius: 12px;">
-            <img src="nwm-gdrom.jpg"
+            <img src="inundation.png"
                 alt=""
                 style="width: 180%; 
                         height: 120%; 
@@ -1003,299 +1004,72 @@ display: block;
 
             <h3>Large-scale Flood Inundation Mapping</h3>
             <p class="project-description">
-                Following the development of our data-driven reservoir operation models, my followed research focuses on their integration into large-scale hydrological and water resources modeling frameworks. I systematically coupled the reservoir models with large-scale hydrological frameworks, progressing from offline one-way benchmarking studies to a fully two-way coupled large-scale modeling system. 
+                Leveraging the capabilities of advanced hydrological and hydrodynamic models, specifically <a href="https://github.com/PrincetonUniversity/Tiger_HLM_GPU">Tiger-HLM (Princeton)</a> and <a href="https://triton.ornl.gov/documentation/">TRITON (Oak Ridge National Laboratory)</a>, I co-developed with A. Michalek a unified modeling framework for large-scale flood inundation mapping. This framework was  validated across two river basins in the Eastern United States, providing a scalable solution for high-resolution flood hazard assessment.
 
                 <details>
                     <summary>Technical Details & Publications</summary>
                     <p>
-                        With GDROM in hand, I evaluated the performance gains achievable. In the one-way coupling study, I drove GDROM with National Water Model (NWM) retrospective streamflow simulations across the CONUS, replacing the NWM’s built-in reservoir rules at data-rich reservoirs. In other words, the hydrological component (NWM) and the reservoir operation component (GDROM) are run separately. The results demonstrated significant improvements in regulated streamflow simulation nationally, while also revealing an important modeling constraint: inaccurate reservoir inflow and storage simulation can offset the benefits of improved operation rules. This work is published in <a href="https://doi.org/10.1111/1752-1688.13244">JAWRA Journal of the American Water Resources Association (2025)</a>.
-                    </p>
-                    <p>
-                        One-way coupling is a critical first step, but the ultimate goal is to achieve a fully two-way coupled modeling system, where the hydrological and reservoir operation components interact with each other at each time step. Our first two-way coupling is led by my colleague A. Vora, coupling GDROM with a conceptual hydrological model at lumped watershed scale. This work is published in <a href="https://doi.org/10.1029/2023WR035703">Water Resources Research (2024)</a>.
-                    </p>
-                    <p>
-                        Extending the two-way coupling to finer resolution, I am currently implementing the model coupling with Princeton's GPU-accelerated rainfall-<a href="https://github.com/PrincetonUniversity/Tiger_HLM_GPU">runoff</a>-<a href="https://github.com/PrincetonUniversity/Tiger_HLM_Routing">routing</a> model, Tiger-HLM, at the hydrography90m ultra-high-resolution river network. This work is ongoing, and stay tuned for the code and results!
+                        The hydrological component of the framework is driven by Tiger-HLM, which operates on ultra-high-resolution hillslopes (catchments) and river reaches provided by the <a href="https://hydrography.org/hydrography90m/hydrography90m_layers">hydrography90m</a> dataset. The hydrodynamic component is driven by TRITON, which solves 2D shallow water equations and captures fluvial, pluvial, and coastal inundation simultaneously. Both Tiger-HLM and TRITON are accelerated by GPU. The manuscript describing Tiger-HLM-TRITON coupling and its application for flood inundation mapping is currently in preparation.
                     </p>
                 </details>
             </p>
             <div class="project-tags" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;">
-                <span class="tag">Machine Learning</span>
-                <span class="tag">Hydrological Modeling</span>
-                <span class="tag">Coupled Modeling</span>
+                <span class="tag">Flood Inundation Mapping</span>
+                <span class="tag">Hydrological & Hydrodynamic Modeling</span>
+                <span class="tag">GPU</span>
             </div>
         </div>
     </div>
 
 </section>
-
-<section id="engagement" style="margin-top: 60px;">
-    <h2>Academic Engagement</h2>
-
-    <div class="engagement-item">
-        <span class="engagement-type">Invited Talk</span>
-        <div class="engagement-content">
-            Session Talk, <b>AGU Fall Meeting</b>, Session H21H: Remote Sensing of Rivers, Lakes, Reservoirs, and Wetlands
-        </div>
-        <span class="engagement-year">2025</span>
-    </div>
-
-    <div class="engagement-item">
-        <span class="engagement-type">Service</span>
-        <div class="engagement-content">
-            Co-chair, <b>IEEE IGARSS</b> Community Contributed Theme CCT.31: Microwave-based water monitoring
-        </div>
-        <span class="engagement-year">2026</span>
-    </div>
-
-    <div class="engagement-item">
-        <span class="engagement-type">Service</span>
-        <div class="engagement-content">
-            Organization Committee, <b>IEEE GRSS MAMI WATA Workshop</b>
-        </div>
-        <span class="engagement-year">2025</span>
-    </div>
-
-    <div class="engagement-item">
-        <span class="engagement-type">Forum</span>
-        <div class="engagement-content">
-            1,000 Scientist AI Jam, 
-            <a href="https://openai.com/global-affairs/1000-scientist-ai-jam-session/" target="_blank" 
-            style= "font-weight: bold;">U.S. Dept. of Energy (DOE) & OpenAI</a>
-        </div>
-        <span class="engagement-year">2025</span>
-    </div>
-
-    <div class="engagement-item">
-        <span class="engagement-type">Advisory</span>
-        <div class="engagement-content">
-            Review Panel, <b>NASA Earth Science Division</b>
-        </div>
-        <span class="engagement-year">2024</span>
-    </div>
 
     
-</section>
-<section id="presentations" style="margin-top: 60px; max-width: 1000px;">
-    <h2 style="border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; margin-bottom: 20px;">Selected Presentations</h2>
-    <div style="font-size: 0.85rem; color: #888; margin-bottom: 25px; font-style: italic; background: #fafafa; padding: 10px; border-radius: 4px; border-left: 3px solid #ddd;">
-        Note: Oral unless specified. Presented by collaborator*
-    </div>
-
-    <div class="pres-container">
-        <div class="pres-row">
-            <div class="pres-meta"><span class="pres-venue-tag">2025 AGU Fall</span>New Orleans, LA</div>
-            <div class="pres-content">
-                <span class="pres-title">Daily CYGNSS Water Maps Reveal Inland Water Hot Spots and Hot Moments, from Wetlands to Floodplains <span class="status-badge badge-invited">Invited</span></span>
-                <hr style="border: 0; border-top: 1px dashed #eee; margin: 15px 0;">
-                <span class="pres-title">Meter-Scale Hail Detection from Space <span class="status-badge badge-poster">Poster</span></span>
-                <hr style="border: 0; border-top: 1px dashed #eee; margin: 15px 0;">
-                <span class="pres-title">High-Resolution Flood Inundation Mapping of U.S. Tribal Nations Under Current and Future Conditions: The Case of the Santee Sioux Nation <span class="status-badge badge-poster">Poster</span></span>
-                <span class="pres-location">American Geophysical Union Fall Meeting</span>
-            </div>
-        </div>
-
-        <div class="pres-row">
-            <div class="pres-meta"><span class="pres-venue-tag">2025 MAMI WATA</span>Rome, Italy and Online</div>
-            <div class="pres-content">
-                <span class="pres-title">Daily CYGNSS WaterMask Reveals Hydrologic Hot Moments and Dynamic Wetland Variability</span>
-                <span class="pres-location">IEEE GRSS Workshop at Sapienza University of Rome</span>
-            </div>
-        </div>
-
-        <div class="pres-row">
-            <div class="pres-meta"><span class="pres-venue-tag">2025 CYGNSS STM</span>Miami, FL</div>
-            <div class="pres-content">
-                <span class="pres-title">Mission Status and Ocean Wind Data Products - Water Mask Product Update</span>
-                <span class="pres-location">CYGNSS Science Team Meeting</span>
-            </div>
-        </div>
-
-        <div class="pres-row">
-            <div class="pres-meta"><span class="pres-venue-tag">2024 AGU Fall</span>Washington, D.C.</div>
-            <div class="pres-content">
-                <span class="pres-title">Deciphering the Interplay Between Fire Regimes and Wetland Refill Dynamics in the Pantanal: Implications of Climate Variability and Fire Behavior <span class="status-badge badge-poster">Poster</span></span>
-                <span class="pres-location">American Geophysical Union Fall Meeting</span>
-            </div>
-        </div>
-
-        <!-- <div class="pres-row">
-            <div class="pres-meta"><span class="pres-venue-tag">2024 ICEAA-IEEE</span>Lisbon, Portugal</div>
-            <div class="pres-content">
-                <span class="pres-title">Advancing Hydrological Insights: Daily Surface Water Dynamics through CYGNSS Data in Tropical Wetlands*</span>
-                <span class="pres-location">International Conference on Electromagnetics in Advanced Applications</span>
-            </div>
-        </div> -->
-
-        <div class="pres-row">
-            <div class="pres-meta"><span class="pres-venue-tag">2024 WaterSciCon</span>St. Paul, MN</div>
-            <div class="pres-content">
-                <span class="pres-title"> Evaluating the Interplay Between Wildfires and Wetland Resilience Through 
-                  GNSS-R-derived Inundation Monitoring in Tropical Ecosystems <span class="status-badge badge-poster">Poster</span></span>
-                <span class="pres-location">The Water Science Conference</span>
-            </div>
-        </div>
-
-        <div class="pres-row">
-            <div class="pres-meta"><span class="pres-venue-tag">2024 CYGNSS STM</span>Ann Arbor, MI</div>
-            <div class="pres-content">
-                <span class="pres-title"> The Berkeley-RWAWC Watermask Product and Ongoing Efforts Towards a CYGNSS-Based Flood Warning System*</span>
-                <span class="pres-location">CYGNSS Science Team Meeting</span>
-            </div>
-        </div>
-
-
-
-        <div class="pres-row">
-            <div class="pres-meta"><span class="pres-venue-tag">2024 AGU Chapman</span> Honolulu, HI</div>
-            <div class="pres-content">
-                <span class="pres-title"> From Flames to Floods: A CYGNSS-Based Study Assessing the Interplay Between Wildfires and Wetland Resilience in the Tropics
-                <span class="status-badge badge-poster">Poster</span></span>
-                <hr style="border: 0; border-top: 1px dashed #eee; margin: 15px 0;">
-                <span class="pres-title"> Beneath the sea of clouds: a new CYGNSS-based monthly watermask product uncovers the hidden seasonality of tropical waterbodies*
-                <span class="status-badge badge-poster">Poster</span></span>
-                <span class="pres-location">American Geophysical Union Chapman Conference - Remote Sensing of the Water Cycle: Sensors to Science to Society</span>
-            </div>
-        </div>
-
-        <details>
-            <summary>View Earlier Presentations (2019–2023)</summary>
-
-        <div class="pres-row">
-            <div class="pres-meta"><span class="pres-venue-tag">2023 AGU Fall</span>San Francisco, CA</div>
-            <div class="pres-content">
-                <span class="pres-title">Unprecedented Wildfires and Wetland Resilience: A Remote Sensing-based Analysis of the Dynamic Interplay Between Changing Fire Behavior and Wetland Refill Pattern in the Pantanal</span>
-                <hr style="border: 0; border-top: 1px dashed #eee; margin: 15px 0;">
-                <span class="pres-title">Beneath the sea of clouds: a new CYGNSS-based monthly watermask product uncovers the hidden seasonality of tropical waterbodies*</span>
-
-                <span class="pres-location">American Geophysical Union Fall Meeting</span>
-            </div>
-        </div>
-
-        <div class="pres-row">
-            <div class="pres-meta"><span class="pres-venue-tag">2023 MAMI WATA</span>Pasadena, CA</div>
-            <div class="pres-content">
-                <span class="pres-title">Revolutionizing tropical wetland monitoring with GNSS-R: Introducing Berkeley-RWAWC, UC Berkeley's Random Walk Algorithm WaterMask from CYGNSS</span>
-                <span class="pres-location">IEEE GRSS MAMI WATA Workshop at Caltech</span>
-            </div>
-        </div>
-
-        <div class="pres-row">
-            <div class="pres-meta"><span class="pres-venue-tag">2023 IGARSS</span>Pasadena, CA</div>
-            <div class="pres-content">
-                <span class="pres-title">Mapping Urban Flooding with CYGNSS and Computer Vision: A Florida Case Study</span>
-                <hr style="border: 0; border-top: 1px dashed #eee; margin: 15px 0;">
-                <span class="pres-title"> Coupling CYGNSS and DEM Data For High Spatio-Temporal Mapping of Inundation*</span>
-                <span class="pres-location">IEEE International Geoscience and Remote Sensing Symposium</span>
-            </div>
-        </div>
-
-        <div class="pres-row">
-            <div class="pres-meta"><span class="pres-venue-tag">2023 IEEE GNSS+R</span>Boulder, CO</div>
-            <div class="pres-content">
-                <span class="pres-title">Integrating CYGNSS and DEM Data with Computer Vision Algorithm, RawIF-based Validation for High Spatio-temporal Mapping of Inundation</span>
-                <span class="pres-location">IEEE GNSS+R Specialist Meeting on Reflectometry using GNSS and other Signals of Opportunity</span>
-            </div>
-        </div>
-
-                <div class="pres-row">
-            <div class="pres-meta"><span class="pres-venue-tag">2023 CYGNSS STM</span>Online</div>
-            <div class="pres-content">
-                <span class="pres-title"> Continental-Scale Mapping of Waterbodies Using Raw IF Tracks for Validation: An Update</span>
-                <span class="pres-location">CYGNSS Science Team Meeting</span>
-            </div>
-        </div>
-
-        <div class="pres-row">
-            <div class="pres-meta"><span class="pres-venue-tag">2022 AGU Fall</span>Chicago, IL</div>
-            <div class="pres-content">
-                <span class="pres-title">Coupling CYGNSS and Digital Elevation Data for High Spatio-temporal Mapping of Inundation</span>
-                <span class="pres-location">American Geophysical Union Fall Meeting</span>
-            </div>
-        </div>
-
-                       <div class="pres-row">
-            <div class="pres-meta"><span class="pres-venue-tag">2022 CYGNSS STM</span>Ann Arbor, MI</div>
-            <div class="pres-content">
-                <span class="pres-title"> Water Masks for Modeling Methane Emissions</span>
-                <span class="pres-location">CYGNSS Science Team Meeting</span>
-            </div>
-        </div>
-
-        <div class="pres-row">
-            <div class="pres-meta"><span class="pres-venue-tag">2022 FIHM</span>San Juan, PR</div>
-            <div class="pres-content">
-                <span class="pres-title">Using CYGNSS for High Spatio-temporal Mapping of Inundation at the Global Scale</span>
-                <span class="pres-location">Frontiers in Hydrology Meeting</span>
-            </div>
-        </div>
-        <div class="pres-row">
-            <div class="pres-meta"><span class="pres-venue-tag">2022 EFMH</span>Berkeley, CA</div>
-            <div class="pres-content">
-                <span class="pres-title">Yangtze River Flood Management and Assessment of Extreme Hydrological Events in Poyang Lake</span>
-                <span class="pres-location">Environmental Fluid Mechanics and Hydrology Group Meeting</span>
-            </div>
-        </div>
-        <div class="pres-row">
-            <div class="pres-meta"><span class="pres-venue-tag">2020 AGU Fall</span>Online</div>
-            <div class="pres-content">
-                <span class="pres-title">Characterization of Nitrogen Hot Spots and Hot Moments in a Flood Plain Using Numerical Modeling <span class="status-badge badge-poster">Poster</span></span>
-                <span class="pres-location">American Geophysical Union Fall Meeting</span>
-            </div>
-        </div>
-
-        <div class="pres-row">
-            <div class="pres-meta"><span class="pres-venue-tag">2019 AGU Fall</span>San Francisco, CA</div>
-            <div class="pres-content">
-                <span class="pres-title">A Review and Evaluation of Analytical Solutions for Steady-state Tunnel Inflow Using Numerical Modeling <span class="status-badge badge-poster">Poster</span></span>
-                <span class="pres-location">American Geophysical Union Fall Meeting</span>
-            </div>
-        </div>
-        </details>
-    </div>
 </section>
 
 <section id="teaching" style="margin-top: 60px;">
     <h2>Teaching Experience</h2>
 
-    <span class="teaching-role">Guest Lecture @ UC Berkeley</span>
-    
+    <span class="teaching-role">Lecturer @ Princeton</span>
     <div class="teaching-item">
-        <span class="teaching-year">2023 SP</span>
-        <span class="course-id">CIV ENG 203N</span>
-        <span class="course-name">Surface Water Hydrology – <i>Topic: Atmospheric Circulation</i></span>
+        <span class="teaching-year">2025 SP</span>
+        <span class="course-id">ENV 423</span>
+        <span class="course-name">Hydroclimatology</span>
     </div>
 
-    <span class="teaching-role">Graduate Student Instructor @ UC Berkeley</span>
+    <span class="teaching-role">Facilitator @ Princeton</span>
+
+    <div class="teaching-item">
+        <span class="teaching-year">2025 WT</span>
+        <span class="course-id">Wintersession</span>
+        <span class="course-name">SWAT Workshop</span>
+    </div>
+
+    <span class="teaching-role">Graduate Teaching Assistant @ University of Illinois</span>
 
     <div class="teaching-item">
         <span class="teaching-year">2024 SP</span>
-        <span class="course-id">CIV ENG 203N</span>
-        <span class="course-name">Surface Water Hydrology</span>
+        <span class="course-id">CEE Curiculum</span>
+        <span class="course-name">Computing Teaching Support</span>
     </div>
 
     <div class="teaching-item">
-        <span class="teaching-year">2022 SP</span>
-        <span class="course-id">PHYSICS 7A</span>
-        <span class="course-name">Physics for Scientists and Engineers</span>
+        <span class="teaching-year">2023 FA</span>
+        <span class="course-id">CEE 434</span>
+        <span class="course-name">Environmental System Analysis</span>
+    </div>
+
+    <div class="teaching-item">
+        <span class="teaching-year">2022 FA</span>
+        <span class="course-id">CEE 434</span>
+        <span class="course-name">Environmental System Analysis</span>
     </div>
 
     <div class="teaching-item">
         <span class="teaching-year">2021 FA</span>
-        <span class="course-id">PHYSICS 7A</span>
-        <span class="course-name">Physics for Scientists and Engineers</span>
+        <span class="course-id">CEE 434</span>
+        <span class="course-name">Environmental System Analysis</span>
     </div>
 
-    <div class="teaching-item">
-        <span class="teaching-year">2021 SU</span>
-        <span class="course-id">PHYSICS 7A</span>
-        <span class="course-name">Physics for Scientists and Engineers</span>
-    </div>
-
-    <div class="teaching-item">
-        <span class="teaching-year">2021 SP</span>
-        <span class="course-id">CIV ENG 202A</span>
-        <span class="course-name">Vadose Zone Hydrology</span>
-    </div>
 </section>
 
 <section id="skills-training" style="margin-top: 60px;">
@@ -1315,12 +1089,7 @@ display: block;
                 <span class="cert-date">2025.06</span>
 
             </div>
-              <div style="font-size: 0.8rem; color: #999; margin-bottom: 12px;"> NVIDIA, OpenACC Organization and Princeton University</div>
-            <div class="cert-item">
-                <span class="cert-name"><b>Sustainability Learning Cohort</b></span>
-                <span class="cert-date">2025.04</span>
-            </div>
-            <div style="font-size: 0.8rem; color: #999; margin-bottom: 12px;">  Princeton Graduate School’s GradFUTURES program and the Office of Sustainability</div>
+            <div style="font-size: 0.8rem; color: #999; margin-bottom: 12px;"> NVIDIA, OpenACC Organization and Princeton University</div>
 
             <div class="cert-item">
                 <span class="cert-name"><b>Parallel Programming & GPU Bootcamp</b></span>
@@ -1328,25 +1097,6 @@ display: block;
                 
             </div>
             <div style="font-size: 0.8rem; color: #999; margin-bottom: 12px;"> Princeton Institute for Computational Science and Engineering (PICSciE) and Research Computing</div>
-
-            <div class="cert-item">
-                <span class="cert-name"><b>TOUGHREACT Short Course for Scientists and Engineers</b></span>
-                <span class="cert-date">2022.02</span>
-                
-            </div>
-            <div style="font-size: 0.8rem; color: #999; margin-bottom: 12px;">Lawrence Berkeley National Laboratory (LBNL) Energy Geosciences Division</div>
-
-            <div class="cert-item">
-                <span class="cert-name"><b>Engineer-in-Training (EIT)</b></span>
-                <span class="cert-date">2021.10</span>
-            </div>
-            <div style="font-size: 0.8rem; color: #999;">California Board for Professional Engineers, Land Surveyors, and Geologists</div>
-
-            <div class="cert-item">
-                <span class="cert-name"><b>Computational Science and Engineering Certification for Civil Engineering</b></span>
-                <span class="cert-date">2018.05</span>
-            </div>
-            <div style="font-size: 0.8rem; color: #999;"> University of Illinois Urbana-Champaign</div>
        </div>
 
         <div>
@@ -1355,34 +1105,34 @@ display: block;
             <div class="skill-group">
                 <span class="skill-title">Programming</span>
                 <div class="pill-container">
-                    <span class="pill">Python</span><span class="pill">R</span>
-                    <span class="pill">MATLAB</span><span class="pill">C++</span>
-                    <span class="pill">Java</span>
-                    <span class="pill">JavaScript</span><span class="pill">C#</span>
+                    <span class="pill">Python</span>
+                    <span class="pill">R</span>
+                    <span class="pill">C++</span>
+                    <span class="pill">Fortran</span>
+                    <span class="pill">JavaScript</span>
+                    <span class="pill">SQL</span>
                 </div>
             </div>
 
             <div class="skill-group">
                 <span class="skill-title">High-Performance Computing (HPC)</span>
                 <div class="pill-container">
-                    <span class="pill">Princeton Tiger3 & Della Clusters</span>
-                    <span class="pill">Berkeley Savio Clusters</span>
+                    <span class="pill">UNIX/Linux</span>
+                    <span class="pill">Bash</span>
+                    <span class="pill">MP/MPI</span>
+                    <span class="pill">Princeton Clusters</span>
+                    <span class="pill">Illinois HAL Cluster</span>
                 </div>
             </div>
 
             <div class="skill-group">
-                <span class="skill-title">Graphics & VR</span>
+                <span class="skill-title">Hydrologic & Hydraulic</span>
                 <div class="pill-container">
-                    <span class="pill">WebGL</span><span class="pill">Unity</span>
-                </div>
-            </div>
-
-            <div class="skill-group">
-                <span class="skill-title">Engineering Tools</span>
-                <div class="pill-container">
-                    <span class="pill">ArcGIS</span><span class="pill">TRITON</span>
-                    <span class="pill">ToughReact</span>
-                    <span class="pill">CrunchFlow</span><span class="pill">ModelMuse</span>
+                    <span class="pill">VIC</span>
+                    <span class="pill">WRF-Hydro</span>
+                    <span class="pill">SWAT</span>
+                    <span class="pill">TRITON</span>
+                    <span class="pill">Tiger-HLM</span>
                 </div>
             </div>
         </div>
@@ -1390,18 +1140,12 @@ display: block;
     </div>
 </section>
 
-        <!-- <section id="work">
-            <h2>Work Experience</h2>
-            <p><b>Postdoctoral Researcher</b> | Princeton University (2024 - Present)</p>
-            <p>Research on climate hazards, remote sensing applications, and machine learning models for environmental resilience.</p>
-        </section> -->
 <div class="mobile-site-footer">
     <div class="mobile-footer-links">
-        <a href="https://scholar.google.com/citations?user=OGFBEx0AAAAJ&hl=en" target="_blank">Scholar</a>
-        <a href="https://orcid.org/0009-0008-4850-9160" target="_blank">ORCID</a>
-        <!-- <br> -->
-        <a href="https://www.linkedin.com/in/tianjiao-pu-713948173" target="_blank">LinkedIn</a>
-        <a href="https://environment.princeton.edu/people/tianjiao-pu/" target="_blank">Affiliation</a>
+        <a href="https://scholar.google.com/citations?user=-YUvZhYAAAAJ&hl=en" target="_blank">Scholar</a>
+        <a href="https://orcid.org/0000-0003-1294-9005" target="_blank">ORCID</a>
+        <a href="https://www.linkedin.com/in/donghui-hydro" target="_blank">LinkedIn</a>
+        <a href="https://environment.princeton.edu/people/donghui-li/" target="_blank">Affiliation</a>
     </div>
     <div class="mobile-copyright">
         © 2026 Donghui Li
