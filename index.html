@@ -234,12 +234,31 @@
         .profile-image {
             width: 300px;
             height: 300px;
-            border-radius: 50%; 
+            border-radius: 50%;
             object-fit: cover;
             border: 0px solid #fff;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
            /* border-radius: 28px; 轻微圆角比直角更现代 */
             transition: transform 0.3s ease;
+        }
+
+        .research-profile-container {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .research-profile-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .research-profile-caption {
+            text-align: center;
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
         }
 
         /* --- 标题与表格 --- */
@@ -879,14 +898,19 @@ display: block;
                 <p style="font-style: italic;">
                     Outside of research, rock music is one of my favorite ways to recharge. Nirvana and Hedgehog (刺猬乐队) are my all-time favorites.
                 </p>
-                <p style="font-weight: bold;">
-                    <a href="CV_Donghui_Li.pdf" target="_blank" style="color: #FF5F05;">[Download Full CV (PDF)]</a>
-                </p>
             </div>
             <div class="profile-image-container">
                 <img src="profile.png" alt="Donghui Li" class="profile-image">
             </div>
         </section>
+
+        <div class="research-profile-container">
+            <img src="research_profile.png" alt="Research Profile" class="research-profile-image">
+            <p class="research-profile-caption">From Prediction to Impact: A Research Program on Hydroclimatic Extremes</p>
+            <p style="font-weight: bold; text-align: center;">
+                <a href="CV_Donghui_Li.pdf" target="_blank" style="color: #FF5F05;">[Download Full CV (PDF)]</a>
+            </p>
+        </div>
 
         <section id="education">
             <h2>Education</h2>
