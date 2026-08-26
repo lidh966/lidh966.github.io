@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donghui Li | Home Page</title>
+    <title>Donghui Li | Hydroclimate and Water Resources</title>
+    <meta name="description" content="Donghui Li studies hydroclimatic extremes in managed river systems using Earth-system prediction, high-resolution hydrological modeling, machine learning, and high-performance computing.">
     <style>
 
     /* 遮罩层背景 */
@@ -411,6 +412,7 @@
 
       .project-tags {
           display: flex;
+          flex-wrap: wrap;
           gap: 10px;
       }
 
@@ -616,6 +618,178 @@
     /* 默认桌面端样式（假设你的侧边栏在左侧） */
 .menu-toggle { display: none; } /* 电脑端隐藏按钮 */
 
+      .contact-line {
+          margin-top: 18px;
+          font-size: 0.92rem;
+      }
+
+      .contact-line a,
+      .text-link {
+          color: #0055CC;
+          text-decoration: none;
+          font-weight: 600;
+      }
+
+      .contact-line a:hover,
+      .text-link:hover {
+          text-decoration: underline;
+      }
+
+      .research-pillars {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 18px;
+          margin-top: 20px;
+      }
+
+      .research-pillar {
+          padding: 22px;
+          background: #f8fafc;
+          border: 1px solid #e5eaf0;
+          border-radius: 16px;
+      }
+
+      .research-pillar h3 {
+          margin: 0 0 10px;
+          font-size: 1.05rem;
+          line-height: 1.35;
+          color: #111;
+      }
+
+      .research-pillar p {
+          margin: 0;
+          font-size: 0.9rem;
+          line-height: 1.6;
+          color: #555;
+      }
+
+      .pillar-number {
+          display: block;
+          margin-bottom: 8px;
+          color: #0055CC;
+          font-size: 0.75rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+      }
+
+      .project-concept {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 13px;
+          padding: 24px;
+          box-sizing: border-box;
+          text-align: center;
+          background: linear-gradient(145deg, #eef6ff, #f8fbff);
+          color: #164e73;
+      }
+
+      .project-concept strong {
+          font-size: 1.05rem;
+          line-height: 1.35;
+      }
+
+      .concept-flow {
+          font-size: 0.76rem;
+          font-weight: 700;
+          line-height: 1.8;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+      }
+
+      .project-role {
+          display: inline-block;
+          margin-bottom: 10px;
+          color: #0055CC;
+          font-size: 0.77rem;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+      }
+
+      .project-outcome {
+          margin-top: 12px;
+          padding-left: 13px;
+          border-left: 3px solid #cfe2f7;
+          color: #374151;
+          font-size: 0.9rem;
+      }
+
+      .publication-list {
+          margin-top: 10px;
+      }
+
+      .publication-item {
+          padding: 14px 0;
+          border-bottom: 1px solid #edf0f3;
+          font-size: 0.93rem;
+          line-height: 1.55;
+      }
+
+      .publication-item:last-child {
+          border-bottom: none;
+      }
+
+      .publication-item a {
+          color: #0055CC;
+          text-decoration: none;
+      }
+
+      .publication-item a:hover {
+          text-decoration: underline;
+      }
+
+      .publication-meta {
+          display: block;
+          margin-top: 3px;
+          color: #777;
+          font-size: 0.82rem;
+      }
+
+      .output-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 16px;
+          margin-top: 22px;
+      }
+
+      .output-card {
+          padding: 20px;
+          border: 1px solid #e5eaf0;
+          border-radius: 14px;
+          background: #fff;
+      }
+
+      .output-card h3 {
+          margin: 0 0 8px;
+          color: #111;
+          font-size: 1rem;
+      }
+
+      .output-card p {
+          min-height: 68px;
+          margin: 0 0 12px;
+          color: #666;
+          font-size: 0.86rem;
+          line-height: 1.55;
+      }
+
+      .teaching-detail {
+          display: block;
+          margin: -4px 0 16px 220px;
+          color: #777;
+          font-size: 0.84rem;
+          line-height: 1.5;
+      }
+
+      .expertise-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 50px;
+      }
+
 .mobile-site-footer {
     display: none;
 }
@@ -803,7 +977,34 @@ display: block;
     /* 8. 项目展示在手机端变成上下结构 */
     .project-item {
         flex-direction: column;
+        align-items: stretch;
         gap: 15px;
+    }
+
+    .project-info {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .project-figure {
+        width: 100%;
+        height: 240px;
+        flex-basis: auto;
+        box-sizing: border-box;
+    }
+
+    .research-pillars,
+    .output-grid,
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .output-card p {
+        min-height: 0;
+    }
+
+    .teaching-detail {
+        margin-left: 0;
     }
 .project-figure {
         overflow: hidden;  /* 确保圆角能正常显示 */
@@ -849,7 +1050,6 @@ display: block;
     <div class="nav-header">
         <div class="nav-name" style="margin-bottom: 30px;">
             <span class="en-name">Donghui Li</span>
-
         </div>
         <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
     </div>
@@ -857,198 +1057,253 @@ display: block;
     <div class="nav-content">
         <div class="nav-links">
             <a href="#about">About</a>
-            <a href="#education">Education</a>
             <a href="#projects">Selected Projects</a>
-            <a href="#teaching">Teaching Experience</a>
-            <a href="#skills-training">Skills</a>
+            <a href="#outputs">Publications &amp; Software</a>
+            <a href="#teaching">Teaching</a>
+            <a href="#expertise">Expertise</a>
         </div>
 
         <div class="mobile-footer">
             <div class="sidebar-footer" style="width: 100%; margin-top: 100px;">
-                <a href="https://scholar.google.com/citations?user=-YUvZhYAAAAJ&hl=en" target="_blank">Scholar</a>
-                <a href="https://orcid.org/0000-0003-1294-9005" target="_blank">ORCID</a>
-                <br> <a href="https://www.linkedin.com/in/donghui-hydro" target="_blank">LinkedIn</a>
-                <a href="https://environment.princeton.edu/people/donghui-li/" target="_blank">Affiliation</a> </br>
+                <!-- <a href="mailto:donghui.li@princeton.edu">Email</a> -->
+                <a href="https://scholar.google.com/citations?user=-YUvZhYAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar</a>
+                <a href="https://orcid.org/0000-0003-1294-9005" target="_blank" rel="noopener">ORCID</a>
+                <br>
+                <a href="https://www.linkedin.com/in/donghui-hydro" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://environment.princeton.edu/people/donghui-li/" target="_blank" rel="noopener">Affiliation</a>
             </div>
-            <!-- <div class="copyright-text"  style="width: 100%; margin-bottom: 0px; font-size: 0.65rem; color: #bbb; letter-spacing: 0.5px;
-            padding-left: 10px;">
-                  © 2026 Donghui Li
-            </div> -->
         </div>
     </div>
 </nav>
 
-    <main class="content">
-        
-        <section id="about" class="profile-container">
-            <div class="profile-text">
-              <h2>About Me</h2>
-                <p>
-                    Hello! I'm Donghui.
-                </p>
-                <p>
-                    I am a Postdoctoral Research Associate at Princeton University through the <a href="https://aos.princeton.edu/">Atmospheric and Oceanic Sciences (AOS) Program</a>, working with <a href="https://www.gfdl.noaa.gov/kirsten-findell-homepage/">Dr. Kirsten Findell</a> at the <a href="https://www.gfdl.noaa.gov/">Geophysical Fluid Dynamics Laboratory (GFDL)</a>. I earned my Ph.D. from the University of Illinois Urbana-Champaign in 2024 under the advisement of <a href="https://cee.illinois.edu/directory/profile/xmcai" target="_blank">Dr. Ximing Cai</a>.
-                </p>
-                <p>
-                    My research focuses on understanding and predicting hydrological extremes across seasonal to multi-decadal timescales. I integrate Earth system modeling, hydrological and water resources modeling, machine learning, and high-performance computing to investigate hydroclimatic processes and improve the prediction of floods, droughts, and water availability under a changing climate.
-                </p>
-                <p>
-                    My current research leverages GFDL's SPEAR Earth system model to investigate the seasonal predictability and long-term evolution of hydrological extremes. By coupling climate predictions and projections with hydrological models, I seek to better understand the mechanisms driving hydroclimatic variability and to develop science-based information that supports water resources management and climate resilience.
-                </p>
-                <p style="font-style: italic;">
-                    Outside of research, rock music is one of my favorite ways to recharge. Nirvana and Hedgehog (刺猬乐队) are my all-time favorites.
-                </p>
-            </div>
-            <div class="profile-image-container">
-                <img src="profile.png" alt="Donghui Li" class="profile-image">
-            </div>
-        </section>
-
-        <div class="research-profile-container">
-            <img src="research_profile.png" alt="Research Profile" class="research-profile-image">
-            <p class="research-profile-caption">From Prediction to Impact: A Research Program on Hydroclimatic Extremes</p>
-            <p style="font-weight: bold; text-align: center;">
-                <a href="CV_Donghui_Li.pdf" target="_blank" style="color: #FF5F05;">[Download Full CV (PDF)]</a>
+<main class="content">
+    <section id="about" class="profile-container">
+        <div class="profile-text">
+            <h2>About Me</h2>
+            <p>Hello! I'm Donghui.</p>
+            <p>
+                I study <strong>hydroclimatic extremes in river systems shaped by natural processes and human activities</strong>. I develop high-resolution hydrological and water management models, couple them with flood-inundation models, and connect these systems to Earth-system prediction ensembles. Across this work, I combine process-based modeling, interpretable machine learning, remote sensing, and high-performance computing.
+            </p>
+            <p>
+                I am a Postdoctoral Research Associate at Princeton University through the <a href="https://aos.princeton.edu/">Atmospheric and Oceanic Sciences Program</a>, collaborating with <a href="https://www.gfdl.noaa.gov/kirsten-findell-homepage/">Kirsten Findell</a> and <a href="https://www.gfdl.noaa.gov/keith-dixon-homepage/">Keith Dixon</a> at NOAA's <a href="https://www.gfdl.noaa.gov/">Geophysical Fluid Dynamics Laboratory</a>. My current work links GFDL's SPEAR prediction ensembles with distributed hydrological models to investigate when, where, and why flood risk is predictable at seasonal timescales. My postdoctoral research at Princeton has also included collaboration with <a href="https://cee.princeton.edu/people/gabriele-villarini">Gabriele Villarini</a> on large-scale flood inundation mapping, including the development of a high-resolution modeling framework linking distributed hydrological and hydrodynamic models.
+            </p>
+            <p>
+                I earned my Ph.D. in Civil and Environmental Engineering from the University of Illinois Urbana-Champaign in 2024, advised by <a href="https://cee.illinois.edu/directory/profile/xmcai">Ximing Cai</a>, with a graduate minor in Statistics.
+            </p>
+            <p class="contact-line">
+                Contact: <a href="mailto:donghui.li@princeton.edu">donghui.li@princeton.edu</a>
+            </p>
+            <p style="font-style: italic;">
+                Outside of research, rock music is one of my favorite ways to recharge. Nirvana and Hedgehog (刺猬乐队) are my all-time favorites.
             </p>
         </div>
-
-        <section id="education">
-            <h2>Education</h2>
-            <table class="edu-table">
-                <tr>
-                    <td class="degree">Ph.D.</td>
-                    <td>University of Illinois Urbana-Champaign</td>
-                    <td> Civil and Environmental Engineering<br> &emsp; with Graduate Minor in Statistics</td>
-                    <td class="year">2024</td>
-                </tr>
-                <tr>
-                    <td class="degree">M.Sc.</td>
-                    <td>University of Illinois Urbana-Champaign</td>
-                    <td> Civil and Environmental Engineering</td>
-                    <td class="year">2020</td>
-                </tr>
-                <tr>
-                    <td class="degree">B.E.</td>
-                    <td>Tsinghua University</td>
-                    <td>Hydraulic Engineering</td>
-                    <td class="year">2018</td>
-                </tr>
-            </table>
-        </section>       
-</div>
-
-<section id="projects" style="margin-top: 60px;">
-    <h2>Selected Projects</h2>
-    <div class="project-item">
-        <div class="project-figure" style=" overflow: hidden; border-radius: 12px;">
-        <img src="hydrosim_gdrom.png"
-            alt=""
-            style="width: 180%; 
-                    height: 120%; 
-                    object-fit: cover; 
-                    object-position: 35%;
-                    transform: translate(-1%, -5%);"> 
+        <div class="profile-image-container">
+            <img src="profile.png" alt="Portrait of Donghui Li" class="profile-image">
         </div>
-        <div class="project-info">
+    </section>
 
-            <h3>Water Management Modeling for Large-scale Hydrological Modeling</h3>
-            <p class="project-description">
-                This research includes a suite of machine learning models I developed and co-developed to establish empirical reservoir operation rules, which aims to better represent human water management in large-scale hydrological and water resources modeling frameworks. Better simulation of the important human dimension will significantly enhance the accuracy of streamflow simulations in managed river basins. 
-
-                <details>
-                    <summary>Technical Details & Publications</summary>
-                    <p>
-                        The foundational model is Generic Data-driven Reservoir Operation Model (GDROM), which is a coupled Hidden Markov Model and Decision Tree framework to extract reservoir operation rules from historical data. GDROM is designed to be generic and interpretable. Applying the GDROM to 400+ major reservoirs across CONUS, we identified real-world operation patterns across regions and reservoir types, which provides a critical step toward generalizing data-extracted empirical operation rules to data-scarce reservoirs. This series of work is published in <a href="https://doi.org/10.1016/j.advwatres.2022.104274">Advances in Water Resources (2022)</a> and <a href="https://doi.org/10.1029/2023WR036686">Water Resources Research (2024)</a>. 
-                    </p>
-                    <p>
-                        Based on GDROM and its revealed CONUS operation patterns, specifically the representative operation modules and their seasonal application and transition found in the WRR paper, I designed a practical and parsimonious approach to generalize data-extracted operation rules to data-scarce reservoirs. This work is published in <a href="https://doi.org/10.1029/2025MS005180">Journal of Advances in Modeling Earth Systems (2026)</a>.
-                    </p>
-
-                </details>
-            </p>
-            <div class="project-tags" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;">
-                <span class="tag">Machine Learning</span>
-                <span class="tag">Hidden Markov Model</span>
-                <span class="tag">Decision Tree</span>
-                <span class="tag">Reservoir Operation</span>
-            </div>
-        </div>
+    <div class="research-profile-container">
+        <img src="research_profile.png" alt="Research program connecting Earth-system prediction, managed river-system modeling, hydroclimatic extremes, and actionable knowledge" class="research-profile-image">
+        <p class="research-profile-caption">From prediction to impact: a research program on hydroclimatic extremes</p>
+        <p style="font-weight: bold; text-align: center;">
+            <a href="CV_Donghui_Li.pdf" target="_blank" rel="noopener" style="color: #FF5F05;">Download Full CV (PDF)</a>
+        </p>
     </div>
 
-    <div class="project-item">
-        <div class="project-figure" style=" overflow: hidden; border-radius: 12px;">
-            <img src="nwm-gdrom.jpg"
-                alt=""
-                style="width: 180%; 
-                        height: 120%; 
-                        object-fit: cover; 
-                        object-position: 35%;
-                        transform: translate(-1%, -5%);"> 
-        </div>
-        
-        <div class="project-info">
+    <section id="education">
+        <h2>Education</h2>
+        <table class="edu-table">
+            <tr>
+                <td class="degree">Ph.D.</td>
+                <td>University of Illinois Urbana-Champaign</td>
+                <td>Civil and Environmental Engineering<br>Graduate Minor in Statistics</td>
+                <td class="year">2024</td>
+            </tr>
+            <tr>
+                <td class="degree">M.S.</td>
+                <td>University of Illinois Urbana-Champaign</td>
+                <td>Civil and Environmental Engineering</td>
+                <td class="year">2020</td>
+            </tr>
+            <tr>
+                <td class="degree">B.E.</td>
+                <td>Tsinghua University</td>
+                <td>Hydraulic Engineering</td>
+                <td class="year">2018</td>
+            </tr>
+        </table>
+    </section>
 
-            <h3>Coupled Hydrological and Water Management Modeling and Analysis</h3>
-            <p class="project-description">
-                Following the development of our data-driven reservoir operation models, my followed research focuses on their integration into large-scale hydrological and water resources modeling frameworks. I systematically coupled the reservoir models with large-scale hydrological frameworks, progressing from offline one-way benchmarking studies to a fully two-way coupled large-scale modeling system. 
+    <section id="projects" style="margin-top: 60px;">
+        <h2>Selected Projects</h2>
 
+        <article class="project-item">
+            <div class="project-figure project-concept" aria-label="Conceptual flow from climate prediction to river response and flood risk">
+                <strong>Prediction across timescales</strong>
+                <span class="concept-flow">Climate ensembles<br>↓<br>River-system response<br>↓<br>Hydroclimatic Extremes</span>
+            </div>
+            <div class="project-info">
+                <span class="project-role">Current research · NOAA GFDL collaboration</span>
+                <h3>Prediction of Hydroclimatic Extremes Across Timescales</h3>
+                <div class="project-description">
+                    <p>
+                        Skillful climate prediction does not automatically translate into useful prediction of hydrological extremes like flood and droughts. I am linking GFDL's SPEAR seasonal prediction ensembles with distributed hydrological and hydrodynamic models to identify where and when hydroclimatic extremes are predictable, and how that skill changes as atmospheric information propagates through land and river networks.
+                    </p>
+                    <p class="project-outcome">
+                        <strong>Research goal:</strong> bridge seasonal climate predictability and decision-relevant hydrological risk, while building toward a unified framework spanning weather-scale forecasts and multidecadal projections.
+                    </p>
+                </div>
+                <div class="project-tags">
+                    <span class="tag">Earth-System Prediction</span>
+                    <span class="tag">Seasonal Prediction</span>
+                    <span class="tag">Hydroclimatic Extremes</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-item">
+            <div class="project-figure" style="overflow: hidden; border-radius: 12px;">
+                <img src="hydrosim_gdrom.png" alt="Reservoir operation patterns identified across the contiguous United States" style="width: 180%; height: 120%; object-fit: cover; object-position: 35%; transform: translate(-1%, -5%);">
+            </div>
+            <div class="project-info">
+                <span class="project-role">Developer and co-developer · GDROM and MODROM</span>
+                <h3>Interpretable Machine Learning for Reservoir Operations</h3>
+                <div class="project-description">
+                    <p>
+                        Large-scale hydrological models often simplify how reservoirs respond to changing inflow, storage, season, and wet/dry conditions. I developed and co-developed a family of interpretable machine learning models that infer decision rules from past operation records and transfer it to reservoirs with limited operating data.
+                    </p>
+                    <p class="project-outcome">
+                        <strong>Key contribution:</strong> analysis of 400+ major US reservoirs revealed representative operating modules and transition patterns; MODROM then generalized those modules to data-scarce reservoirs using widely available dam attributes.
+                    </p>
+                </div>
                 <details>
-                    <summary>Technical Details & Publications</summary>
+                    <summary>Methods, findings &amp; publications</summary>
                     <p>
-                        With GDROM in hand, I evaluated the performance gains achievable. In the one-way coupling study, I drove GDROM with National Water Model (NWM) retrospective streamflow simulations across the CONUS, replacing the NWM’s built-in reservoir rules at data-rich reservoirs. In other words, the hydrological component (NWM) and the reservoir operation component (GDROM) are run separately. The results demonstrated significant improvements in regulated streamflow simulation nationally, while also revealing an important modeling constraint: inaccurate reservoir inflow and storage simulation can offset the benefits of improved operation rules. This work is published in <a href="https://doi.org/10.1111/1752-1688.13244">JAWRA Journal of the American Water Resources Association (2025)</a>.
+                        The Generic Data-driven Reservoir Operation Model (GDROM) combines a hidden Markov model with decision trees: the first identifies shifts among operating modes, and the second represents each mode with interpretable release rules. This work appeared in <a href="https://doi.org/10.1016/j.advwatres.2022.104274">Advances in Water Resources (2022)</a> and <a href="https://doi.org/10.1029/2023WR036686">Water Resources Research (2024)</a>.
                     </p>
                     <p>
-                        One-way coupling is a critical first step, but the ultimate goal is to achieve a fully two-way coupled modeling system, where the hydrological and reservoir operation components interact with each other at each time step. Our first two-way coupling is led by my colleague A. Vora, coupling GDROM with a conceptual hydrological model at lumped watershed scale. This work is published in <a href="https://doi.org/10.1029/2023WR035703">Water Resources Research (2024)</a>.
-                    </p>
-                    <p>
-                        Extending the two-way coupling to finer resolution, I am currently implementing the model coupling with Princeton's GPU-accelerated rainfall-<a href="https://github.com/PrincetonUniversity/Tiger_HLM_GPU">runoff</a>-<a href="https://github.com/PrincetonUniversity/Tiger_HLM_Routing">routing</a> model, Tiger-HLM, at the hydrography90m ultra-high-resolution river network. This work is ongoing, and stay tuned for the code and results!
+                        I subsequently developed the Modular Data-driven Reservoir Operation Model (MODROM), a parsimonious framework that transfers operating behavior from data-rich to data-scarce reservoirs. The study appeared in <a href="https://doi.org/10.1029/2025MS005180">Journal of Advances in Modeling Earth Systems (2026)</a>.
                     </p>
                 </details>
-            </p>
-            <div class="project-tags" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;">
-                <span class="tag">Machine Learning</span>
-                <span class="tag">Hydrological Modeling</span>
-                <span class="tag">Coupled Modeling</span>
+                <div class="project-tags">
+                    <span class="tag">Interpretable ML</span>
+                    <span class="tag">Reservoir Operations</span>
+                    <span class="tag">Transfer Learning</span>
+                </div>
             </div>
-        </div>
-    </div>
+        </article>
 
-    <div class="project-item">
-        <div class="project-figure" style=" overflow: hidden; border-radius: 12px;">
-            <img src="inundation.png"
-                alt=""
-                style="width: 180%; 
-                        height: 120%; 
-                        object-fit: cover; 
-                        object-position: 35%;
-                        transform: translate(-1%, -5%);"> 
-        </div>
-        
-        <div class="project-info">
-
-            <h3>Large-scale Flood Inundation Mapping</h3>
-            <p class="project-description">
-                Leveraging the capabilities of advanced hydrological and hydrodynamic models, specifically <a href="https://github.com/PrincetonUniversity/Tiger_HLM_GPU">Tiger-HLM (Princeton)</a> and <a href="https://triton.ornl.gov/documentation/">TRITON (Oak Ridge National Laboratory)</a>, I co-developed with A. Michalek a unified modeling framework for large-scale flood inundation mapping. This framework was  validated across two river basins in the Eastern United States, providing a scalable solution for high-resolution flood hazard assessment.
-
-                <details>
-                    <summary>Technical Details & Publications</summary>
+        <article class="project-item">
+            <div class="project-figure" style="overflow: hidden; border-radius: 12px;">
+                <img src="nwm-gdrom.jpg" alt="Coupling reservoir operations with large-scale hydrological models" style="width: 180%; height: 120%; object-fit: cover; object-position: 35%; transform: translate(-1%, -5%);">
+            </div>
+            <div class="project-info">
+                <span class="project-role">Developer · TigeRes</span>
+                <h3>Coupled Modeling of Managed River Systems</h3>
+                <div class="project-description">
                     <p>
-                        The hydrological component of the framework is driven by Tiger-HLM, which operates on ultra-high-resolution hillslopes (catchments) and river reaches provided by the <a href="https://hydrography.org/hydrography90m/hydrography90m_layers">hydrography90m</a> dataset. The hydrodynamic component is driven by TRITON, which solves 2D shallow water equations and captures fluvial, pluvial, and coastal inundation simultaneously. Both Tiger-HLM and TRITON are accelerated by GPU. The manuscript describing Tiger-HLM-TRITON coupling and its application for flood inundation mapping is currently in preparation.
+                        I integrate data-driven reservoir operations into hydrological models to determine how management changes regulated streamflow, drought propagation, and water availability. This program has progressed from offline benchmarking with the National Water Model and VIC to TigeRes, a two-way coupled system that embeds MODROM within the GPU-accelerated Tiger-HLM.
+                    </p>
+                    <p class="project-outcome">
+                        <strong>Current scale:</strong> TigeRes is being evaluated across the Mississippi River Basin on a network of approximately 18.6 million river links and 1,700 reservoirs.
+                    </p>
+                </div>
+                <details>
+                    <summary>Methods, findings &amp; publications</summary>
+                    <p>
+                        Offline coupling with National Water Model retrospective flows improved regulated-streamflow simulation across the United States while showing that inflow and storage errors can offset better operating rules. The results appeared in <a href="https://doi.org/10.1111/1752-1688.13244">JAWRA (2025)</a>. Related two-way coupling at watershed scale appeared in <a href="https://doi.org/10.1029/2023WR035703">Water Resources Research (2024)</a>.
+                    </p>
+                    <p>
+                        My ongoing TigeRes work evaluates how reservoir representation, storage dynamics, and parameter uncertainty propagate through connected river networks. Code is available through the <a href="https://github.com/lidh966/TigeRes">TigeRes repository</a>; a framework manuscript is in preparation.
                     </p>
                 </details>
-            </p>
-            <div class="project-tags" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;">
-                <span class="tag">Flood Inundation Mapping</span>
-                <span class="tag">Hydrological & Hydrodynamic Modeling</span>
-                <span class="tag">GPU</span>
+                <div class="project-tags">
+                    <span class="tag">Coupled Modeling</span>
+                    <span class="tag">Managed Rivers</span>
+                    <span class="tag">GPU Computing</span>
+                    <span class="tag">Drought</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-item">
+            <div class="project-figure" style="overflow: hidden; border-radius: 12px;">
+                <img src="inundation.png" alt="High-resolution flood inundation simulation" style="width: 180%; height: 120%; object-fit: cover; object-position: 35%; transform: translate(-1%, -5%);">
+            </div>
+            <div class="project-info">
+                <span class="project-role">Project lead · Industry-sponsored proof of concept</span>
+                <h3>High-Resolution Flood Inundation Modeling</h3>
+                <div class="project-description">
+                    <p>
+                        I led a proof-of-concept implementation of a coupled <a href="https://github.com/PrincetonUniversity/Tiger_HLM_GPU">Tiger-HLM</a>–<a href="https://triton.ornl.gov/documentation/">TRITON</a> framework that translates atmospheric forcing into runoff, river flow, and two-dimensional flood inundation. The framework combines distributed hydrology with GPU-accelerated hydrodynamics to capture fluvial and pluvial flooding.
+                    </p>
+                    <p class="project-outcome">
+                        <strong>Demonstrated capability:</strong> 30-meter modeling across the Delaware and Susquehanna River Basins, driven by a 200-member climate ensemble to generate probabilistic inundation information for catastrophe-risk assessment.
+                    </p>
+                </div>
+                <details>
+                    <summary>Methods &amp; current status</summary>
+                    <p>
+                        Tiger-HLM routes runoff through the ultra-high-resolution Hydrography90m river network, while TRITON solves the two-dimensional shallow-water equations. The project delivered a technical report and probabilistic inundation data products to the sponsor. Broader applications of this modeling framework are under development, including continental flood-hazard assessment under historical and future climate conditions.
+                    </p>
+                </details>
+                <div class="project-tags">
+                    <span class="tag">Flood Inundation</span>
+                    <span class="tag">Hydrodynamics</span>
+                    <span class="tag">Ensemble Risk</span>
+                    <span class="tag">GPU Computing</span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section id="outputs">
+        <h2>Selected Publications</h2>
+        <div class="publication-list">
+            <div class="publication-item">
+                <strong>Parsimonious and transferrable parameterization of reservoir operations: A modular approach for large-scale modeling.</strong>
+                <span class="publication-meta"><strong>Li, D.</strong> &amp; Villarini, G. · <em>Journal of Advances in Modeling Earth Systems</em>, 2026 · <a href="https://doi.org/10.1029/2025MS005180">DOI</a></span>
+            </div>
+            <div class="publication-item">
+                <strong>Streamflow simulation improvements enabled by a state-of-the-art algorithm for reservoir routing in the US National Water Model.</strong>
+                <span class="publication-meta"><strong>Li, D.</strong>, Vora, A. &amp; Cai, X. · <em>JAWRA</em>, 2025 · <a href="https://doi.org/10.1111/1752-1688.13244">DOI</a></span>
+            </div>
+            <div class="publication-item">
+                <strong>Uncovering historical reservoir operation rules and patterns: Insights from 452 large reservoirs in the contiguous United States.</strong>
+                <span class="publication-meta"><strong>Li, D.</strong>, Chen, Y., Lyu, L. &amp; Cai, X. · <em>Water Resources Research</em>, 2024 · <a href="https://doi.org/10.1029/2023WR036686">DOI</a></span>
+            </div>
+            <div class="publication-item">
+                <strong>Coupling reservoir operation and rainfall-runoff processes for streamflow simulation in watersheds.</strong>
+                <span class="publication-meta">Vora, A., Cai, X., Chen, Y. &amp; <strong>Li, D.</strong> · <em>Water Resources Research</em>, 2024 · <a href="https://doi.org/10.1029/2023WR035703">DOI</a></span>
+            </div>
+            <div class="publication-item">
+                <strong>Developing a generic data-driven reservoir operation model.</strong>
+                <span class="publication-meta">Chen, Y., <strong>Li, D.</strong>, Zhao, Q. &amp; Cai, X. · <em>Advances in Water Resources</em>, 2022 · <a href="https://doi.org/10.1016/j.advwatres.2022.104274">DOI</a></span>
             </div>
         </div>
-    </div>
+        <p style="margin-top: 18px;">
+            See my <a class="text-link" href="https://scholar.google.com/citations?user=-YUvZhYAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar profile</a> or <a class="text-link" href="CV_Donghui_Li.pdf" target="_blank" rel="noopener">full CV</a> for the complete publication record.
+        </p>
 
-</section>
-
-    
-</section>
+        <h2 style="margin-top: 45px;">Software &amp; Data</h2>
+        <div class="output-grid">
+            <article class="output-card">
+                <h3>GDROM</h3>
+                <p>Interpretable machine-learning-based reservoir operation rules and data products for 400+ US reservoirs.</p>
+                <a class="text-link" href="https://www.hydroshare.org/resource/63add4d5826a4b21a6546c571bdece10/" target="_blank" rel="noopener">Project resource →</a>
+            </article>
+            <article class="output-card">
+                <h3>TigeRes</h3>
+                <p>A coupled water-management extension of Tiger-HLM for regulated-streamflow simulation on high-resolution river networks.</p>
+                <a class="text-link" href="https://github.com/lidh966/TigeRes" target="_blank" rel="noopener">GitHub repository →</a>
+            </article>
+            <article class="output-card">
+                <h3>Tiger-HLM</h3>
+                <p>A GPU-accelerated distributed hydrological model; my contributions include snow, soil-temperature, and large-scale I/O components.</p>
+                <a class="text-link" href="https://github.com/PrincetonUniversity/Tiger_HLM_GPU" target="_blank" rel="noopener">GitHub repository →</a>
+            </article>
+        </div>
+    </section>
 
 <section id="teaching" style="margin-top: 60px;">
     <h2>Teaching Experience</h2>
@@ -1079,110 +1334,100 @@ display: block;
     <div class="teaching-item">
         <span class="teaching-year">2023 FA</span>
         <span class="course-id">CEE 434</span>
-        <span class="course-name">Environmental System Analysis</span>
+        <span class="course-name">Environmental Systems I</span>
     </div>
 
     <div class="teaching-item">
         <span class="teaching-year">2022 FA</span>
         <span class="course-id">CEE 434</span>
-        <span class="course-name">Environmental System Analysis</span>
+        <span class="course-name">Environmental Systems I</span>
     </div>
 
     <div class="teaching-item">
         <span class="teaching-year">2021 FA</span>
         <span class="course-id">CEE 434</span>
-        <span class="course-name">Environmental System Analysis</span>
+        <span class="course-name">Environmental Systems I</span>
     </div>
 
 </section>
 
-<section id="skills-training" style="margin-top: 60px;">
-    <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px;">
-        
-        <div>
-            <h2>Certifications & Training</h2>
-            
-            <div class="cert-item">
-                <span class="cert-name"><b>Software Engineering Summer School</b></span>
-                <span class="cert-date">2025.06</span>
-            </div>
-            <div style="font-size: 0.8rem; color: #999; margin-bottom: 12px;">Princeton University,  and the Research Software Engineering Group</div>
-
-            <div class="cert-item">
-                <span class="cert-name"><b>Princeton Open Hackathon (NVIDIA)</b></span>
-                <span class="cert-date">2025.06</span>
-
-            </div>
-            <div style="font-size: 0.8rem; color: #999; margin-bottom: 12px;"> NVIDIA, OpenACC Organization and Princeton University</div>
-
-            <div class="cert-item">
-                <span class="cert-name"><b>Parallel Programming & GPU Bootcamp</b></span>
-                <span class="cert-date">2024.10</span>
-                
-            </div>
-            <div style="font-size: 0.8rem; color: #999; margin-bottom: 12px;"> Princeton Institute for Computational Science and Engineering (PICSciE) and Research Computing</div>
-       </div>
-
-        <div>
-            <h2>Technical Expertise</h2>
-            
-            <div class="skill-group">
-                <span class="skill-title">Programming</span>
-                <div class="pill-container">
-                    <span class="pill">Python</span>
-                    <span class="pill">R</span>
-                    <span class="pill">C++</span>
-                    <span class="pill">Fortran</span>
-                    <span class="pill">JavaScript</span>
-                    <span class="pill">SQL</span>
+    <section id="expertise" style="margin-top: 60px;">
+        <div class="expertise-grid">
+            <div>
+                <h2>Technical Expertise</h2>
+                <div class="skill-group">
+                    <span class="skill-title">Programming &amp; Data</span>
+                    <div class="pill-container">
+                        <span class="pill">Python</span>
+                        <span class="pill">R</span>
+                        <span class="pill">C/C++</span>
+                        <span class="pill">Fortran</span>
+                        <span class="pill">MATLAB</span>
+                        <span class="pill">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <span class="skill-title">High-Performance Computing</span>
+                    <div class="pill-container">
+                        <span class="pill">Linux</span>
+                        <span class="pill">Bash</span>
+                        <span class="pill">OpenMP/MPI</span>
+                        <span class="pill">CUDA</span>
+                        <span class="pill">Kokkos</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <span class="skill-title">Environmental Modeling</span>
+                    <div class="pill-container">
+                        <span class="pill">Tiger-HLM</span>
+                        <span class="pill">TRITON</span>
+                        <span class="pill">VIC</span>
+                        <span class="pill">WRF-Hydro</span>
+                        <span class="pill">SWAT</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="skill-group">
-                <span class="skill-title">High-Performance Computing (HPC)</span>
-                <div class="pill-container">
-                    <span class="pill">UNIX/Linux</span>
-                    <span class="pill">Bash</span>
-                    <span class="pill">MP/MPI</span>
-                    <span class="pill">Princeton Clusters</span>
-                    <span class="pill">Illinois HAL Cluster</span>
+            <div>
+                <h2>Awards &amp; Service</h2>
+                <div class="cert-item">
+                    <span class="cert-name"><strong>Mavis Future Faculty Fellowship</strong><br><small>University of Illinois Urbana-Champaign</small></span>
+                    <span class="cert-date">2023</span>
                 </div>
-            </div>
+                <div class="cert-item">
+                    <span class="cert-name"><strong>Conference Travel/Presentation Award</strong><br><small>University of Illinois Urbana-Champaign</small></span>
+                    <span class="cert-date">2021, 2023</span>
+                </div>
+                <div class="cert-item">
+                    <span class="cert-name"><strong>Early Career Convener</strong><br><small>American Geophysical Union Annual Meeting</small></span>
+                    <span class="cert-date">2025</span>
+                </div>
+                <div class="cert-item">
+                    <span class="cert-name"><strong>Journal Reviewer</strong><br><small>EMS, GMD, HESS, JoH, WRR, and others</small></span>
+                    <span class="cert-date">Service</span>
+                </div>
 
-            <div class="skill-group">
-                <span class="skill-title">Hydrologic & Hydraulic</span>
-                <div class="pill-container">
-                    <span class="pill">VIC</span>
-                    <span class="pill">WRF-Hydro</span>
-                    <span class="pill">SWAT</span>
-                    <span class="pill">TRITON</span>
-                    <span class="pill">Tiger-HLM</span>
-                </div>
+                <h3 style="margin-top: 28px; color: #111; font-size: 1rem;">Advanced Computing Training</h3>
+                <p style="font-size: 0.86rem; color: #666; line-height: 1.6;">
+                    Princeton Software Engineering Summer School (2025); NVIDIA Open Hackathon (2025); Parallel Programming &amp; GPU Bootcamp (2024).
+                </p>
             </div>
         </div>
+    </section>
 
+    <div class="mobile-site-footer">
+        <div class="mobile-footer-links">
+            <a href="mailto:donghui.li@princeton.edu">Email</a>
+            <a href="https://scholar.google.com/citations?user=-YUvZhYAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar</a>
+            <a href="https://orcid.org/0000-0003-1294-9005" target="_blank" rel="noopener">ORCID</a>
+            <a href="https://www.linkedin.com/in/donghui-hydro" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://environment.princeton.edu/people/donghui-li/" target="_blank" rel="noopener">Affiliation</a>
+        </div>
     </div>
-</section>
-
-<div class="mobile-site-footer">
-    <div class="mobile-footer-links">
-        <a href="https://scholar.google.com/citations?user=-YUvZhYAAAAJ&hl=en" target="_blank">Scholar</a>
-        <a href="https://orcid.org/0000-0003-1294-9005" target="_blank">ORCID</a>
-        <a href="https://www.linkedin.com/in/donghui-hydro" target="_blank">LinkedIn</a>
-        <a href="https://environment.princeton.edu/people/donghui-li/" target="_blank">Affiliation</a>
-    </div>
-    <!-- <div class="mobile-copyright">
-        © 2026 Donghui Li
-    </div> -->
-</div>
 </main>
 
-    </main>
-
-
-
 <div id="image-viewer">
-        <img id="full-image" src="">
+        <img id="full-image" alt="Expanded project figure">
     </div>
 
     <script>
@@ -1223,7 +1468,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
     </script>
-</body>
-</html>
 </body>
 </html>
